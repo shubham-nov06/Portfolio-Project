@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shubham - Developer Portfolio</title>
+    <title>Shubham - Web Developer Portfolio</title>
 
     <style>
+        /* GLOBAL STYLES */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-
         body {
-            background: #080820;
-            color: #fff;
             font-family: "Poppins", sans-serif;
+            background: #0a0a23;
+            color: #fff;
+            line-height: 1.6;
         }
+
+        a { text-decoration: none; color: inherit; }
 
         /* NAVBAR */
         nav {
@@ -22,135 +25,139 @@
             align-items: center;
             padding: 20px 60px;
             background: #13133a;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
             position: sticky;
             top: 0;
-            z-index: 100;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 18px;
-            font-size: 1.05rem;
+            z-index: 1000;
             transition: 0.3s;
         }
 
-        nav a:hover { color: #ffd54f; transform: scale(1.1); }
+        nav .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #6c63ff;
+        }
+
+        nav a {
+            margin: 0 15px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd54f;
+            transform: scale(1.1);
+        }
 
         /* HERO SECTION */
         .hero {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 130px 80px;
-            animation: fadeIn 1.3s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0px); }
+            justify-content: space-between;
+            padding: 120px 80px;
+            animation: fadeIn 1.2s ease-in-out;
         }
 
         .hero-text {
+            max-width: 600px;
             font-size: 2.5rem;
-            line-height: 3.5rem;
-            animation: slideLeft 1s ease-out;
-        }
-
-        @keyframes slideLeft {
-            from { opacity: 0; transform: translateX(-40px); }
-            to { opacity: 1; transform: translateX(0); }
         }
 
         .hero-text span {
             color: #6c63ff;
-            text-shadow: 0px 0px 12px #6c63ff;
         }
 
         .hero img {
-            width: 430px;
+            width: 400px;
+            border-radius: 12px;
             filter: drop-shadow(0px 0px 25px #6c63ff);
-            animation: float 3s infinite ease-in-out;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-18px); }
-            100% { transform: translateY(0px); }
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
         }
 
-        /* PROJECT SECTION */
+        /* PROJECTS SECTION */
         .projects {
-            padding: 60px;
             max-width: 1100px;
-            margin: auto;
+            margin: 80px auto;
+            padding: 0 20px;
         }
 
         .projects h2 {
-            font-size: 2.3rem;
+            font-size: 2.2rem;
             text-align: center;
-            margin-bottom: 40px;
-            animation: fadeIn 1.2s;
+            margin-bottom: 50px;
+            color: #fff;
         }
 
         .card {
-            background: #12122f;
-            padding: 25px;
-            border-radius: 14px;
-            margin: 25px 0;
             display: flex;
-            gap: 25px;
-            align-items: center;
-            box-shadow: 0px 5px 20px rgba(0,0,0,0.6);
-            transition: 0.4s;
-            border: 1px solid transparent;
+            background: #12122f;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+            transition: 0.3s;
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            border: 1px solid #6c63ff;
-            box-shadow: 0px 8px 30px rgba(108,99,255,0.5);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(108,99,255,0.5);
         }
 
         .card img {
-            width: 190px;
-            border-radius: 10px;
-            border: 2px solid #6c63ff;
-            transition: 0.3s;
+            width: 220px;
+            object-fit: cover;
+            border-right: 1px solid #6c63ff;
+            transition: transform 0.3s;
         }
 
         .card img:hover {
             transform: scale(1.05);
         }
 
+        .card-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
         .card-title {
-            font-size: 1.6rem;
-            margin-bottom: 10px;
-            color: #9a8cff;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #6c63ff;
+            margin-bottom: 12px;
         }
 
         .card p {
+            color: #ccc;
             font-size: 1rem;
-            color: #cccccc;
         }
 
         .btn {
             display: inline-block;
-            margin-top: 18px;
-            padding: 12px 25px;
+            margin-top: 15px;
+            padding: 10px 20px;
             background: #6c63ff;
             color: #fff;
-            border-radius: 10px;
-            text-decoration: none;
-            font-size: 1rem;
+            border-radius: 8px;
+            font-weight: 500;
             transition: 0.3s;
         }
 
         .btn:hover {
             background: #5548e3;
-            box-shadow: 0px 0px 15px #6c63ff;
             transform: scale(1.05);
+            box-shadow: 0 0 10px #6c63ff;
         }
 
         /* FOOTER */
@@ -159,22 +166,22 @@
             padding: 25px 0;
             background: #14142d;
             color: #aaa;
-            margin-top: 60px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+            margin-top: 50px;
         }
 
         /* RESPONSIVE */
         @media (max-width: 900px) {
             .hero { flex-direction: column; text-align: center; }
-            .hero img { margin-top: 40px; width: 320px; }
+            .hero img { margin-top: 40px; width: 300px; }
             .card { flex-direction: column; text-align: center; }
+            .card img { width: 100%; border-right: none; border-bottom: 1px solid #6c63ff; }
         }
     </style>
 </head>
 <body>
-
     <nav>
-        <div class="logo">Shubham's Portfolio</div>
+        <div class="logo">Shubham</div>
         <div>
             <a href="#home">Home</a>
             <a href="#projects">Projects</a>
@@ -184,19 +191,19 @@
 
     <section class="hero" id="home">
         <div class="hero-text">
-            Hi, I'm <span>Shubham</span> 👋<br/>
-            A Passionate <span>Web Developer</span><br/>
-            Crafting clean & modern web projects.
+            Hi, I'm <span>Shubham</span> 👋<br>
+            A Passionate <span>Web Developer</span><br>
+            Crafting clean & modern web solutions.
         </div>
-        <img src="developer-png.webp" alt="developer" />
+        <img src="developer-png.webp" alt="Shubham Developer" />
     </section>
 
     <section class="projects" id="projects">
         <h2>🚀 Featured Projects</h2>
 
         <div class="card">
-            <img src="amazon-clone.png" alt="Amazon Project" />
-            <div>
+            <img src="amazon-clone.png" alt="Amazon Clone Project" />
+            <div class="card-content">
                 <div class="card-title">🛒 Amazon Clone</div>
                 <p>A fully functional Amazon website clone with product layout, modern UI, and responsive design.</p>
                 <a href="#" class="btn">🔗 Live Demo</a>
@@ -204,10 +211,10 @@
         </div>
 
         <div class="card">
-            <img src="college-site.png" alt="College Website" />
-            <div>
+            <img src="college-site.png" alt="College Website Project" />
+            <div class="card-content">
                 <div class="card-title">🎓 College Website</div>
-                <p>Complete professional college website with multiple sections, clean UI, and responsive pages.</p>
+                <p>Professional college website with clean UI, multiple sections, and fully responsive pages.</p>
                 <a href="#" class="btn">🔗 Live Demo</a>
             </div>
         </div>
@@ -216,6 +223,5 @@
     <footer>
         © 2025 Shubham | All Rights Reserved
     </footer>
-
 </body>
 </html>
