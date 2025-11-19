@@ -4,14 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shubham - Developer Portfolio</title>
+    <title>Shubham | Developer Portfolio</title>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * {margin: 0; padding: 0; box-sizing: border-box;}
 
         body {
             background: #0a0a23;
@@ -24,23 +20,23 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 60px;
+            padding: 18px 60px;
             background: #11114b;
             position: sticky;
             top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+            z-index: 200;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.4);
         }
 
         nav .logo {
             font-size: 2rem;
-            font-weight: 600;
+            font-weight: 700;
             color: #f5c542;
         }
 
         nav ul {
             display: flex;
-            gap: 25px;
+            gap: 30px;
             list-style: none;
         }
 
@@ -48,24 +44,25 @@
             text-decoration: none;
             color: white;
             font-size: 1.1rem;
-            transition: 0.3s ease;
+            transition: 0.3s;
         }
 
         nav ul li a:hover {
             color: #f5c542;
         }
 
-        /* HERO SECTION */
+        /* HERO */
         .hero {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            padding: 100px 60px;
+            align-items: center;
+            padding: 110px 80px;
         }
 
         .hero-text {
             max-width: 50%;
-            font-size: 1.7rem;
+            font-size: 2rem;
+            line-height: 1.4;
         }
 
         .hero-text .highlight {
@@ -73,54 +70,67 @@
             font-weight: bold;
         }
 
-        #element {
-            font-size: 1.9rem;
+        #typed {
             color: #f5c542;
         }
 
         .hero img {
-            width: 330px;
+            width: 350px;
             filter: drop-shadow(0 0 20px #4f4fff);
         }
 
-        /* SECTION TITLE */
+        /* PROJECT SECTION */
         .section {
-            padding: 40px 60px;
+            padding: 60px 80px;
         }
 
         .section h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
+            font-size: 2.2rem;
             color: #f5c542;
+            margin-bottom: 25px;
         }
 
-        /* SKILLS BOX */
-        .skills-box {
-            display: flex;
-            gap: 50px;
-            padding-top: 20px;
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
 
-        .skill {
-            text-align: center;
+        .project-card {
+            background: #14143a;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(255,255,255,0.1);
+            transition: 0.3s;
         }
 
-        .skill img {
-            width: 70px;
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(255,255,255,0.2);
+        }
+
+        .project-card h3 {
+            color: #7a7afc;
             margin-bottom: 10px;
-            filter: drop-shadow(0 0 5px white);
-            transition: 0.3s ease;
         }
 
-        .skill img:hover {
-            transform: scale(1.1);
+        .project-card p {
+            color: #bbbbbb;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+
+        .project-card a {
+            text-decoration: none;
+            color: #f5c542;
+            font-weight: bold;
         }
 
         /* FOOTER */
         footer {
             background: #0c0c2f;
-            padding: 30px;
-            margin-top: 50px;
+            padding: 35px;
+            margin-top: 70px;
         }
 
         footer h3 {
@@ -128,7 +138,7 @@
             margin-bottom: 20px;
         }
 
-        footer .footer-links {
+        .footer-links {
             display: flex;
             justify-content: center;
             gap: 80px;
@@ -148,9 +158,9 @@
             color: #f5c542;
         }
 
-        footer .rights {
+        .rights {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 15px;
             color: gray;
         }
     </style>
@@ -158,59 +168,33 @@
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- NAV -->
     <nav>
         <div class="logo">Shubham</div>
 
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Skills</a></li>
             <li><a href="#">Projects</a></li>
+            <li><a href="https://github.com/shubham-nov06" target="_blank">GitHub</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- HERO -->
     <section class="hero">
         <div class="hero-text">
-            Hi, I'm <span class="highlight">Shubham</span> 👋 <br />
-            A passionate <span id="element"></span>
+            Hi, I'm <span class="highlight">Shubham</span> 👋 <br>
+            A passionate <span id="typed"></span>
         </div>
 
-        <img src="developer-png.webp" alt="developer-image" />
+        <img src="developer-png.webp" alt="Developer Image">
     </section>
 
-    <!-- SKILL SECTION -->
+    <!-- PROJECTS -->
     <section class="section">
-        <h1>Currently Learning</h1>
+        <h1>My GitHub Projects</h1>
 
-        <div class="skills-box">
-            <div class="skill">
-                <img src="HTML5_logo.svg" alt="" />
-                <p>HTML</p>
-            </div>
-
-            <div class="skill">
-                <img src="css.image.png" alt="" />
-                <p>CSS</p>
-            </div>
-
-            <div class="skill">
-                <img src="png-transparent-c-logo-c-programming.png" alt="" />
-                <p>C Language</p>
-            </div>
-
-            <div class="skill">
-                <img src="c++.image.png" alt="" />
-                <p>C++</p>
-            </div>
-
-            <div class="skill">
-                <img src="JavaScript-Symbol.png" alt="" />
-                <p>JavaScript</p>
-            </div>
-        </div>
+        <div id="projects" class="projects-container"></div>
     </section>
 
     <!-- FOOTER -->
@@ -220,23 +204,9 @@
         <div class="footer-links">
             <ul>
                 <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-                <li>Services</li>
-            </ul>
-
-            <ul>
                 <li>Projects</li>
                 <li>GitHub</li>
-                <li>LinkedIn</li>
-                <li>Experience</li>
-            </ul>
-
-            <ul>
-                <li>Skills</li>
-                <li>Learning</li>
-                <li>Support</li>
-                <li>Feedback</li>
+                <li>Contact</li>
             </ul>
         </div>
 
@@ -245,16 +215,36 @@
         </div>
     </footer>
 
-    <!-- TYPED JS -->
+    <!-- Typed.js -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
-        var typed = new Typed("#element", {
+        new Typed("#typed", {
             strings: ["Web Developer", "Programmer", "Software Engineer"],
-            typeSpeed: 60,
+            typeSpeed: 55,
             backSpeed: 40,
             loop: true,
         });
     </script>
+
+    <!-- Load GitHub Projects Automatically -->
+    <script>
+        fetch("https://api.github.com/users/shubham-nov06/repos")
+            .then(res => res.json())
+            .then(data => {
+                let projectContainer = document.getElementById("projects");
+
+                data.forEach(repo => {
+                    projectContainer.innerHTML += `
+                    <div class="project-card">
+                        <h3>${repo.name}</h3>
+                        <p>${repo.description || "No description available."}</p>
+                        <a href="${repo.html_url}" target="_blank">View Project →</a>
+                    </div>
+                `;
+                });
+            });
+    </script>
+
 </body>
 
 </html>
