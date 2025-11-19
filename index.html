@@ -2,315 +2,257 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shubham - Developer Portfolio</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            background-color: rgb(0, 0, 33);
+            background: #0a0a23;
             color: white;
-            font-family: 'Courier New', Courier, monospace;
-
+            font-family: "Poppins", sans-serif;
         }
 
+        /* NAVBAR */
         nav {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: space-around;
-            height: 80px;
-            background-color: rgb(53, 53, 188);
+            padding: 20px 60px;
+            background: #11114b;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        nav .logo {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #f5c542;
         }
 
         nav ul {
             display: flex;
-            justify-content: center;
-
-        }
-
-        nav ul li {
+            gap: 25px;
             list-style: none;
-            margin: 0 23px;
         }
 
         nav ul li a {
             text-decoration: none;
-            margin: 0 23px;
             color: white;
-            font-size: 1.01rem;
+            font-size: 1.1rem;
+            transition: 0.3s ease;
         }
 
         nav ul li a:hover {
-            color: rgb(236, 189, 47);
+            color: #f5c542;
         }
 
-        .left {
-            font-size: 2rem;
-        }
-
-        .firstsection {
+        /* HERO SECTION */
+        .hero {
             display: flex;
-            justify-content: space-around;
-            margin: 130px 0;
             align-items: center;
+            justify-content: space-between;
+            padding: 100px 60px;
         }
 
-        .firstsection>div {
-            width: 30%;
-
+        .hero-text {
+            max-width: 50%;
+            font-size: 1.7rem;
         }
 
-        .leftsection {
-            font-size: 1.5rem;
-        }
-
-        .rightsection {
-            width: 80px;
-        }
-
-        .purple {
-            color: rgb(51, 51, 174);
-        }
-
-        .textgray {
-            color: gray;
+        .hero-text .highlight {
+            color: #7a7afc;
+            font-weight: bold;
         }
 
         #element {
-            color: rgb(51, 51, 174);
-        }
-
-        .secondsection {
-            height: 80vh;
-            max-width: 80vw;
-            margin: auto;
-        }
-
-        main hr {
-            border: 0%;
-            background-color: yellow;
-            height: 1px;
-            margin: 0px 84px;
-        }
-
-        .secondsection h1 {
             font-size: 1.9rem;
+            color: #f5c542;
         }
 
-        .secondsection .box {
-            background-color: white;
-            height: 2px;
-            margin: 56px 0;
-            width: 76vw;
+        .hero img {
+            width: 330px;
+            filter: drop-shadow(0 0 20px #4f4fff);
+        }
+
+        /* SECTION TITLE */
+        .section {
+            padding: 40px 60px;
+        }
+
+        .section h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #f5c542;
+        }
+
+        /* SKILLS BOX */
+        .skills-box {
             display: flex;
-
+            gap: 50px;
+            padding-top: 20px;
         }
 
-        .secondsection .vertical {
-            height: 93px;
-            width: 1px;
-            background-color: white;
-            margin: 0 120px;
-
-
-        }
-
-        .image-top {
-            width: 23px;
-            position: relative;
-            top: -32px;
-            left: -9px;
-
-        }
-
-        .vertiacal-title {
-            position: relative;
-            top: 75px;
-            width: 150px;
-            font-size: 14px;
-
-
-        }
-
-        .vertical-dec {
-            color: rgb(44, 36, 194);
-            width: 150px;
-            font-size: 9px;
-            top: 83px;
-            position: relative;
-        }
-
-        footer {
-            background-color: rgb(36, 23, 65);
-        }
-
-        .footer {
-            display: flex;
-            padding: 23px 122px;
-            justify-content: space-evenly;
-
-        }
-
-        .footer ul {
-            list-style: none;
-
-        }
-
-        .footer>div {
-            width: 159px;
-
-
-        }
-
-        footer .footer-rights {
+        .skill {
             text-align: center;
+        }
+
+        .skill img {
+            width: 70px;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 5px white);
+            transition: 0.3s ease;
+        }
+
+        .skill img:hover {
+            transform: scale(1.1);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0c0c2f;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        footer h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        footer .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer ul li {
+            margin: 8px 0;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        footer ul li:hover {
+            color: #f5c542;
+        }
+
+        footer .rights {
+            text-align: center;
+            margin-top: 20px;
             color: gray;
-            padding: 12px 0;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="left"> Shubham's Portfolio</div>
-            <div class="right">
-                <ul>
-                    <li><a href="/">Home </a></li>
-                    <li><a href="/">About </a></li>
-                    <li><a href="/">Services</a></li>
-                    <li><a href="/">Projects </a></li>
-                    <li> <a href="/">Contact me </a></li>
 
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">Shubham</div>
 
-                </ul>
-            </div>
-            <li><a href="/">Blog</a></li>
-        </nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 
-    </header>
-    <main>
-        <section class="firstsection">
-
-            <div class="leftsection"> Hi, My name is <span class="purple">Shubham</span>
-
-                <div> I am a passonate</div>
-                <div> Web Developer</div>
-                <span id="element"></span>
-            </div>
-
-            <div class="rightsection">
-                <img src="developer-png.webp" alt="Developer Image" style="
-            width: 60%; margin: 50px , 0;">
-            </div>
-        </section>
-        <hr>
-        <section class="secondsection">
-            <h1>Currently Learning </h1>
-            <span class="text-gray"> Languages </span>
-
-
-            <div class="box">
-                <div class="vertical">
-                    <img class="image-top" src="HTML5_logo.svg">
-                    <div class="vertiacal-title">
-                        Html
-                    </div>
-                    <div class="vertical-dec">
-                    </div>
-
-
-                </div>
-                <div class="vertical">
-                    <img class="image-top" src="css.image.png">
-                    <div class="vertiacal-title">
-                        CSS </div>
-                    <div class="vertical-dec">
-                    </div>
-
-                </div>
-                <div class="vertical">
-                    <img class="image-top" src="png-transparent-c-logo-c-programming.png">
-                    <div class="vertiacal-title">
-                        C </div>
-                    <div class="vertical-dec">
-                    </div>
-
-                </div>
-                <div class="vertical">
-                    <img class="image-top" src="c++.image.png">
-                    <div class="vertiacal-title">
-                        C++ </div>
-                    <div class="vertical-dec">
-                    </div>
-
-                </div>
-                <div class="vertical">
-                    <img class="image-top" src="JavaScript-Symbol.png">
-                    <div class="vertiacal-title">
-                        Javascript </div>
-                    <div class="vertical-dec">
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="footer">
-            <div class="footer-second"></div>
-            <h3> Shubham's Developer Portfolio </h3>
-
-            <div class="footer-second">
-                <ul>
-                    <li> Home</li>
-                    <li> About</li>
-                    <li> contact</li>
-                    <li> Services</li>
-
-
-                </ul>
-            </div>
-
-            <div class="footer-third">
-                <ul>
-                    <li> Home</li>
-                    <li> About</li>
-                    <li> contact</li>
-                    <li> Services</li>
-
-
-                </ul>
-            </div>
-
-            <div class="footer-fourth">
-                <ul>
-                    <li> Home</li>
-                    <li> About</li>
-                    <li> contact</li>
-                    <li> Services</li>
-
-
-                </ul>
-            </div>
-
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-text">
+            Hi, I'm <span class="highlight">Shubham</span> 👋 <br />
+            A passionate <span id="element"></span>
         </div>
-        <div class="footer-rights">
-            Copyright &#169; www.shubhamportfolio.com | All rights reserved
+
+        <img src="developer-png.webp" alt="developer-image" />
+    </section>
+
+    <!-- SKILL SECTION -->
+    <section class="section">
+        <h1>Currently Learning</h1>
+
+        <div class="skills-box">
+            <div class="skill">
+                <img src="HTML5_logo.svg" alt="" />
+                <p>HTML</p>
+            </div>
+
+            <div class="skill">
+                <img src="css.image.png" alt="" />
+                <p>CSS</p>
+            </div>
+
+            <div class="skill">
+                <img src="png-transparent-c-logo-c-programming.png" alt="" />
+                <p>C Language</p>
+            </div>
+
+            <div class="skill">
+                <img src="c++.image.png" alt="" />
+                <p>C++</p>
+            </div>
+
+            <div class="skill">
+                <img src="JavaScript-Symbol.png" alt="" />
+                <p>JavaScript</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h3>Shubham's Developer Portfolio</h3>
+
+        <div class="footer-links">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Services</li>
+            </ul>
+
+            <ul>
+                <li>Projects</li>
+                <li>GitHub</li>
+                <li>LinkedIn</li>
+                <li>Experience</li>
+            </ul>
+
+            <ul>
+                <li>Skills</li>
+                <li>Learning</li>
+                <li>Support</li>
+                <li>Feedback</li>
+            </ul>
+        </div>
+
+        <div class="rights">
+            © 2025 shubhamportfolio.com | All Rights Reserved
         </div>
     </footer>
 
+    <!-- TYPED JS -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
-        var typed = new Typed('#element', {
-            strings: ['<i>Web Developer</i>.', '&amp; a software engineer .'],
-            typeSpeed: 50,
+        var typed = new Typed("#element", {
+            strings: ["Web Developer", "Programmer", "Software Engineer"],
+            typeSpeed: 60,
+            backSpeed: 40,
+            loop: true,
         });
     </script>
 </body>
