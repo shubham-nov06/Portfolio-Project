@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shubham | Developer Portfolio</title>
 
     <style>
         * {margin: 0; padding: 0; box-sizing: border-box;}
 
         body {
-            background: #0a0a23;
+            background: #090916;
             color: white;
             font-family: "Poppins", sans-serif;
         }
@@ -20,18 +20,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 18px 60px;
-            background: #11114b;
-            position: sticky;
-            top: 0;
-            z-index: 200;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+            padding: 20px 60px;
+            background: #16163f;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
         nav .logo {
             font-size: 2rem;
             font-weight: 700;
-            color: #f5c542;
+            color: #f7c948;
         }
 
         nav ul {
@@ -48,30 +45,29 @@
         }
 
         nav ul li a:hover {
-            color: #f5c542;
+            color: #f7c948;
         }
 
         /* HERO */
         .hero {
             display: flex;
             justify-content: space-between;
+            padding: 120px 60px;
             align-items: center;
-            padding: 110px 80px;
         }
 
         .hero-text {
-            max-width: 50%;
-            font-size: 2rem;
+            font-size: 2.5rem;
+            font-weight: 600;
             line-height: 1.4;
         }
 
-        .hero-text .highlight {
-            color: #7a7afc;
-            font-weight: bold;
+        .highlight {
+            color: #7c7cff;
         }
 
-        #typed {
-            color: #f5c542;
+        #type {
+            color: #f7c948;
         }
 
         .hero img {
@@ -79,88 +75,89 @@
             filter: drop-shadow(0 0 20px #4f4fff);
         }
 
-        /* PROJECT SECTION */
+        /* PROJECTS */
         .section {
-            padding: 60px 80px;
+            padding: 60px 60px;
         }
 
         .section h1 {
-            font-size: 2.2rem;
-            color: #f5c542;
+            font-size: 2.4rem;
             margin-bottom: 25px;
+            color: #f7c948;
         }
 
-        .projects-container {
+        .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 35px;
         }
 
-        .project-card {
-            background: #14143a;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 0 15px rgba(255,255,255,0.1);
+        .card {
+            background: #141438;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(255,255,255,0.07);
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 0 25px rgba(255,255,255,0.12);
+        }
+
+        .card img {
+            width: 90px;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 8px black);
             transition: 0.3s;
         }
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 20px rgba(255,255,255,0.2);
+        .card img:hover {
+            transform: scale(1.1);
         }
 
-        .project-card h3 {
-            color: #7a7afc;
+        .card h3 {
+            color: #7c7cff;
             margin-bottom: 10px;
         }
 
-        .project-card p {
-            color: #bbbbbb;
+        .card p {
+            color: #c7c7c7;
             font-size: 0.9rem;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
-        .project-card a {
+        .card a {
             text-decoration: none;
-            color: #f5c542;
-            font-weight: bold;
+            display: inline-block;
+            background: #f7c948;
+            padding: 8px 15px;
+            border-radius: 6px;
+            color: #141438;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .card a:hover {
+            background: #ffe07d;
         }
 
         /* FOOTER */
         footer {
-            background: #0c0c2f;
-            padding: 35px;
-            margin-top: 70px;
+            background: #12122e;
+            padding: 40px;
+            margin-top: 50px;
         }
 
         footer h3 {
             text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 80px;
-        }
-
-        footer ul {
-            list-style: none;
-        }
-
-        footer ul li {
-            margin: 8px 0;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        footer ul li:hover {
-            color: #f5c542;
+            margin-bottom: 10px;
         }
 
         .rights {
             text-align: center;
-            margin-top: 15px;
+            margin-top: 10px;
             color: gray;
         }
     </style>
@@ -176,7 +173,6 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">Projects</a></li>
             <li><a href="https://github.com/shubham-nov06" target="_blank">GitHub</a></li>
-            <li><a href="#">Contact</a></li>
         </ul>
     </nav>
 
@@ -184,32 +180,56 @@
     <section class="hero">
         <div class="hero-text">
             Hi, I'm <span class="highlight">Shubham</span> 👋 <br>
-            A passionate <span id="typed"></span>
+            A passionate <span id="type"></span>
         </div>
 
-        <img src="developer-png.webp" alt="Developer Image">
+        <img src="developer-png.webp" alt="">
     </section>
 
-    <!-- PROJECTS -->
+    <!-- MAIN PROJECTS -->
     <section class="section">
-        <h1>My GitHub Projects</h1>
+        <h1>Main Projects</h1>
 
-        <div id="projects" class="projects-container"></div>
+        <div class="project-grid">
+
+            <!-- Project 1 -->
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/993/993928.png">
+                <h3>Portfolio Website</h3>
+                <p>Your personal web portfolio built with HTML, CSS & JS.</p>
+                <a href="https://github.com/shubham-nov06/Portfolio-Project" target="_blank">View Project</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/919/919828.png">
+                <h3>JavaScript Projects</h3>
+                <p>All JS practice projects and useful scripts.</p>
+                <a href="https://github.com/shubham-nov06/Javascript" target="_blank">View Project</a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/919/919826.png">
+                <h3>HTML & CSS Repo</h3>
+                <p>All UI designs, layouts and front-end components.</p>
+                <a href="https://github.com/shubham-nov06/HTML-CSS" target="_blank">View Project</a>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3098/3098090.png">
+                <h3>Python Codes</h3>
+                <p>All Python basics, loops, functions & scripts.</p>
+                <a href="https://github.com/shubham-nov06/Python-Codes" target="_blank">View Project</a>
+            </div>
+
+        </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
         <h3>Shubham's Developer Portfolio</h3>
-
-        <div class="footer-links">
-            <ul>
-                <li>Home</li>
-                <li>Projects</li>
-                <li>GitHub</li>
-                <li>Contact</li>
-            </ul>
-        </div>
-
         <div class="rights">
             © 2025 shubhamportfolio.com | All Rights Reserved
         </div>
@@ -218,31 +238,12 @@
     <!-- Typed.js -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
-        new Typed("#typed", {
-            strings: ["Web Developer", "Programmer", "Software Engineer"],
+        new Typed("#type", {
+            strings: ["Web Developer", "Programmer", "Coder"],
             typeSpeed: 55,
             backSpeed: 40,
             loop: true,
         });
-    </script>
-
-    <!-- Load GitHub Projects Automatically -->
-    <script>
-        fetch("https://api.github.com/users/shubham-nov06/repos")
-            .then(res => res.json())
-            .then(data => {
-                let projectContainer = document.getElementById("projects");
-
-                data.forEach(repo => {
-                    projectContainer.innerHTML += `
-                    <div class="project-card">
-                        <h3>${repo.name}</h3>
-                        <p>${repo.description || "No description available."}</p>
-                        <a href="${repo.html_url}" target="_blank">View Project →</a>
-                    </div>
-                `;
-                });
-            });
     </script>
 
 </body>
