@@ -70,10 +70,6 @@ nav a:hover { color:#ffd54f; transform: scale(1.05); }
 .project-card p { color:#ccc; }
 .btn { display:inline-block; margin-top:12px; padding:10px 18px; background:#6c63ff; border-radius:8px; color:#fff; }
 
-/* GITHUB AUTO SECTION */
-#github-projects { max-width:1100px; margin:80px auto; }
-#github-projects h2 { text-align:center; color:#6c63ff; margin-bottom:30px; }
-
 /* SKILLS */
 .skills { text-align:center; max-width:1100px; margin:80px auto; }
 .skill-box { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
@@ -96,7 +92,6 @@ footer { text-align:center; padding:25px 0; margin-top:60px; background:#14142d;
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
-        <a href="#github-projects">GitHub Repos</a>
         <a href="#skills">Skills</a>
         <a href="https://github.com/shubham-nov06" target="_blank">GitHub</a>
     </div>
@@ -105,7 +100,7 @@ footer { text-align:center; padding:25px 0; margin-top:60px; background:#14142d;
 <section class="hero" id="home">
     <div>
         <div class="hero-text">Hi, I'm <span>Shubham</span> 👋</div>
-        <div class="hero-sub">B.Tech Student | Aspiring Web Developer | Learning and Sharing Projects</div>
+        <div class="hero-sub">B.Tech Student | Aspiring Developer | Learning and Sharing Projects</div>
     </div>
     <img src="developer-png.webp" alt="Shubham Developer"/>
 </section>
@@ -113,9 +108,8 @@ footer { text-align:center; padding:25px 0; margin-top:60px; background:#14142d;
 <section class="about" id="about">
     <h2>About Me</h2>
     <p>
-        I’m Shubham, a B.Tech student passionate about programming and web development.  
-        I’m building my GitHub portfolio with projects like Amazon Clone and College Website.  
-        I focus on learning new technologies, writing clean code, and documenting my work for continuous improvement.
+        I’m Shubham, a B.Tech student passionate about programming and creating web projects.  
+        I focus on learning new technologies, building meaningful projects, and improving my skills every day.
     </p>
 </section>
 
@@ -125,7 +119,7 @@ footer { text-align:center; padding:25px 0; margin-top:60px; background:#14142d;
 
         <div class="project-card">
             <h3>🛒 Amazon Clone</h3>
-            <p>Fully responsive Amazon UI clone built for learning modern web development.</p>
+            <p>A fully responsive Amazon UI clone created to learn modern web development.</p>
             <a href="https://github.com/shubham-nov06/Amazon-Clone" target="_blank" class="btn">View Repo</a>
         </div>
 
@@ -137,25 +131,6 @@ footer { text-align:center; padding:25px 0; margin-top:60px; background:#14142d;
 
     </div>
 </section>
-
-<section id="github-projects">
-    <h2>My GitHub Repositories</h2>
-    <div id="repo-container"></div>
-</section>
-
-<script src="https://cdn.jsdelivr.net/gh/peterbenoit/RepoWidget@latest/dist/repoWidget.min.js"></script>
-<script>
-createRepoWidget({
-    username: "shubham-nov06",
-    containerId: "repo-container",
-    columns: { desktop:3, tablet:2, mobile:1 },
-    maxRepos:6,
-    sortBy:"updated",
-    scaleOnHover:1.05,
-    cardStyles:{ backgroundColor:"#12122f", borderRadius:"10px", boxShadow:"0 4px 15px rgba(108,99,255,0.3)" },
-    textStyles:{ titleColor:"#6c63ff", descriptionColor:"#ccc", iconColor:"#999" }
-});
-</script>
 
 <section class="skills" id="skills">
     <h2>My Skills</h2>
