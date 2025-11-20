@@ -83,6 +83,30 @@
             50% { transform: translateY(-15px); }
         }
 
+        /* ABOUT SECTION */
+        .about {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 40px 20px;
+            background: #12122f;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+
+        .about h2 {
+            color: #6c63ff;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            color: #ccc;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: auto;
+        }
+
         /* PROJECTS SECTION */
         .projects {
             max-width: 1100px;
@@ -137,11 +161,6 @@
             margin-bottom: 12px;
         }
 
-        .card p {
-            color: #ccc;
-            font-size: 1rem;
-        }
-
         .btn {
             display: inline-block;
             margin-top: 15px;
@@ -157,6 +176,32 @@
             background: #5548e3;
             transform: scale(1.05);
             box-shadow: 0 0 10px #6c63ff;
+        }
+
+        /* SKILLS SECTION */
+        .skills {
+            max-width: 1100px;
+            margin: 80px auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .skills h2 { font-size: 2rem; color: #6c63ff; margin-bottom: 25px; }
+
+        .skill-box {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .skill-item {
+            background: #12122f;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            color: #ccc;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
         }
 
         /* FOOTER */
@@ -183,8 +228,11 @@
         <div class="logo">Shubham</div>
         <div>
             <a href="#home">Home</a>
+            <a href="#about">About</a>
             <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
+            <a href="https://github.com/shubham-nov06" target="_blank">GitHub</a>
         </div>
     </nav>
 
@@ -197,6 +245,15 @@
         <img src="developer-png.webp" alt="Shubham Developer" />
     </section>
 
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>
+            I'm Shubham, a dedicated and passionate Web Developer who loves building modern,
+            responsive and visually pleasing websites. I focus on clean code, smooth UI/UX, and
+            creating digital products that truly make an impact. Always learning, always improving.
+        </p>
+    </section>
+
     <section class="projects" id="projects">
         <h2>🚀 Featured Projects</h2>
 
@@ -205,7 +262,7 @@
             <div class="card-content">
                 <div class="card-title">🛒 Amazon Clone</div>
                 <p>A fully functional Amazon website clone with product layout, modern UI, and responsive design.</p>
-                <a href="https://github.com/shubham-nov06/Amazon-Clone" class="btn" target="_blank">🔗 Live Demo</a>
+                <a href="https://github.com/shubham-nov06/Amazon-Clone" class="btn" target="_blank">🔗 GitHub Repo</a>
             </div>
         </div>
 
@@ -214,8 +271,20 @@
             <div class="card-content">
                 <div class="card-title">🎓 College Website</div>
                 <p>Professional college website with clean UI, multiple sections, and fully responsive pages.</p>
-                <a href="https://github.com/shubham-nov06/College-Website" class="btn" target="_blank">🔗 Live Demo</a>
+                <a href="https://github.com/shubham-nov06/College-Website" class="btn" target="_blank">🔗 GitHub Repo</a>
             </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2>My Skills</h2>
+        <div class="skill-box">
+            <div class="skill-item">HTML</div>
+            <div class="skill-item">CSS</div>
+            <div class="skill-item">JavaScript</div>
+            <div class="skill-item">Responsive Design</div>
+            <div class="skill-item">Git & GitHub</div>
+            <div class="skill-item">UI/UX Basics</div>
         </div>
     </section>
 
@@ -224,3 +293,4 @@
     </footer>
 </body>
 </html>
+
