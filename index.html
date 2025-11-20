@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shubham - B.Tech Student & Aspiring Developer</title>
 
     <style>
@@ -48,6 +48,8 @@
             margin: 0 15px;
             font-weight: 500;
             transition: .3s;
+            text-decoration: none;
+            color: #fff;
         }
 
         nav a:hover {
@@ -114,35 +116,39 @@
         .about h2 {
             font-size: 2.2rem;
             color: #6c63ff;
+            margin-bottom: 15px;
         }
 
         .about p {
-            margin-top: 10px;
             color: #ccc;
             font-size: 1.1rem;
         }
 
         /* PROJECTS */
-        .projects {
+        .projects,
+        .github-repos {
             max-width: 1100px;
             margin: 80px auto;
             padding: 0 20px;
         }
 
-        .projects h2 {
+        .projects h2,
+        .github-repos h2 {
             font-size: 2.3rem;
             text-align: center;
             margin-bottom: 50px;
             color: #6c63ff;
         }
 
-        .project-grid {
+        .project-grid,
+        .repo-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
-        .project-card {
+        .project-card,
+        .repo-card {
             background: #12122f;
             padding: 20px;
             border-radius: 12px;
@@ -150,17 +156,20 @@
             transition: .3s;
         }
 
-        .project-card:hover {
+        .project-card:hover,
+        .repo-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 5px 35px rgba(108, 99, 255, 0.5);
         }
 
-        .project-card h3 {
+        .project-card h3,
+        .repo-card h3 {
             color: #6c63ff;
             margin-bottom: 12px;
         }
 
-        .project-card p {
+        .project-card p,
+        .repo-card p {
             color: #ccc;
         }
 
@@ -172,47 +181,6 @@
             border-radius: 8px;
             color: #fff;
             text-decoration: none;
-        }
-
-        /* GITHUB REPOS */
-        .github-repos {
-            max-width: 1100px;
-            margin: 80px auto;
-            padding: 0 20px;
-        }
-
-        .github-repos h2 {
-            text-align: center;
-            color: #6c63ff;
-            margin-bottom: 30px;
-        }
-
-        .repo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .repo-card {
-            background: #12122f;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
-            transition: .3s;
-        }
-
-        .repo-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 35px rgba(108, 99, 255, 0.5);
-        }
-
-        .repo-card h3 {
-            color: #6c63ff;
-            margin-bottom: 12px;
-        }
-
-        .repo-card p {
-            color: #ccc;
         }
 
         /* SKILLS */
@@ -237,7 +205,54 @@
             border: 1px solid #6c63ff;
         }
 
-        /* FOOTER */
+        /* CONTACT */
+        .contact {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 40px;
+            background: #12122f;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: #6c63ff;
+            margin-bottom: 20px;
+        }
+
+        .contact a {
+            display: inline-block;
+            margin: 10px 15px;
+            padding: 10px 18px;
+            background: #6c63ff;
+            border-radius: 8px;
+            color: #fff;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .contact a:hover {
+            background: #5548e3;
+            transform: scale(1.05);
+        }
+
+        /* RESUME BUTTON */
+        .resume-btn {
+            margin-top: 20px;
+            padding: 12px 22px;
+            background: #ffd54f;
+            color: #000;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .resume-btn:hover {
+            background: #ffc107;
+            transform: scale(1.05);
+        }
+
         footer {
             text-align: center;
             padding: 25px 0;
@@ -266,9 +281,9 @@
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
-            <a href="#github-repos">GitHub Repos</a>
+            <a href="#github-repos">GitHub</a>
             <a href="#skills">Skills</a>
-            <a href="https://github.com/shubham-nov06" target="_blank">GitHub</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
@@ -276,6 +291,7 @@
         <div>
             <div class="hero-text">Hi, I'm <span>Shubham</span> 👋</div>
             <div class="hero-sub">B.Tech Student | Aspiring Developer | Learning and Sharing Projects</div>
+            <a href="Shubham_Resume.pdf" download class="resume-btn">Download Resume</a>
         </div>
         <img src="developer-png.webp" alt="Shubham Developer" />
     </section>
@@ -283,48 +299,41 @@
     <section class="about" id="about">
         <h2>About Me</h2>
         <p>
-            I’m Shubham, a B.Tech student passionate about programming and creating projects.
-            I’m constantly learning new technologies and building projects to improve my skills.
-            All my work is available on GitHub for anyone to view.
+            I’m Shubham, a B.Tech student passionate about programming and creating web projects.
+            I focus on learning new technologies and building practical projects to improve my skills.
+            My work is available on GitHub for anyone to explore.
         </p>
     </section>
 
     <section class="projects" id="projects">
         <h2>Featured Projects</h2>
         <div class="project-grid">
-
             <div class="project-card">
                 <h3>🛒 Amazon Clone</h3>
-                <p>A fully responsive Amazon UI clone created to learn modern web development.</p>
+                <p>A fully responsive Amazon UI clone to practice frontend and backend integration.</p>
                 <a href="https://github.com/shubham-nov06/Amazon-Clone" target="_blank" class="btn">View Repo</a>
             </div>
-
             <div class="project-card">
                 <h3>🎓 College Website</h3>
-                <p>Responsive multi-page website created for college project practice.</p>
+                <p>Responsive multi-page college website project for learning layouts and design.</p>
                 <a href="https://github.com/shubham-nov06/College-Website" target="_blank" class="btn">View Repo</a>
             </div>
-
         </div>
     </section>
 
     <section class="github-repos" id="github-repos">
-        <h2>My GitHub Repositories</h2>
+        <h2>GitHub Repositories</h2>
         <div class="repo-grid">
-
             <div class="repo-card">
                 <h3>Amazon Clone</h3>
-                <p>A simple e-commerce clone to practice frontend and backend integration.</p>
+                <p>Practice project for building e-commerce frontend and backend.</p>
                 <a href="https://github.com/shubham-nov06/Amazon-Clone" target="_blank" class="btn">GitHub Repo</a>
             </div>
-
             <div class="repo-card">
                 <h3>College Website</h3>
-                <p>Multi-page responsive college website project for learning layouts and design.</p>
+                <p>Responsive multi-page college website project.</p>
                 <a href="https://github.com/shubham-nov06/College-Website" target="_blank" class="btn">GitHub Repo</a>
             </div>
-
-            <!-- Add more repos manually here -->
         </div>
     </section>
 
@@ -340,8 +349,15 @@
         </div>
     </section>
 
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <a href="mailto:shubham@example.com">Email Me</a>
+        <a href="https://www.linkedin.com/in/shubham-nov06" target="_blank">LinkedIn</a>
+        <a href="https://github.com/shubham-nov06" target="_blank">GitHub</a>
+    </section>
+
     <footer>
-        © 2025 Shubham | All Rights Reserved | <a href="https://github.com/shubham-nov06" target="_blank">GitHub</a>
+        © 2025 Shubham | All Rights Reserved
     </footer>
 
 </body>
