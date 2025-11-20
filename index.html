@@ -220,7 +220,7 @@
         <div id="repo-container"></div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/gh/peterbenoit/RepoWidget@latest/dist/repoWidget.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/gh/peterbenoit/RepoWidget@latest/dist/repoWidget.min.js"></script>
     <script>
         createRepoWidget({
             username: "shubham-nov06",
@@ -229,3 +229,15 @@
             maxRepos: 6,
             sortBy: "updated",
             scaleOnHover: 1.05,
+            cardStyles: {
+                backgroundColor: "#12122f",
+                borderRadius: "10px",
+                boxShadow: "0 4px 15px rgba(108,99,255,0.3)"
+            },
+            textStyles: {
+                titleColor: "#6c63ff",
+                descriptionColor: "#ccc",
+                iconColor: "#999"
+            }
+        });
+    </script>
