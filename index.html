@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Shubham - B.Tech Student & Web Developer</title>
+<title>Shubham - B.Tech Student & Aspiring Developer</title>
 
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior: smooth; }
 body {
     font-family: "Poppins", sans-serif;
@@ -28,20 +28,9 @@ nav {
     z-index: 1000;
     border-bottom: 1px solid #282852;
 }
-nav .logo {
-    font-weight: 700;
-    font-size: 1.8rem;
-    color: #6c63ff;
-}
-nav a {
-    margin: 0 15px;
-    font-weight: 500;
-    transition: 0.3s;
-}
-nav a:hover {
-    color: #ffd54f;
-    transform: scale(1.05);
-}
+nav .logo { font-weight: 700; font-size: 1.8rem; color:#6c63ff; }
+nav a { margin: 0 15px; font-weight:500; transition:.3s; }
+nav a:hover { color:#ffd54f; transform: scale(1.05); }
 
 /* HERO */
 .hero {
@@ -51,27 +40,13 @@ nav a:hover {
     padding: 140px 80px;
     gap: 40px;
 }
-.hero-text {
-    max-width: 550px;
-    font-size: 2.8rem;
-    font-weight: 600;
-    animation: fadeIn 1.4s ease;
-}
+.hero-text { max-width: 550px; font-size:2.8rem; font-weight:600; animation: fadeIn 1.4s ease; }
 .hero-text span { color: #6c63ff; }
-.hero-sub {
-    font-size: 1.2rem;
-    color: #cfcfcf;
-    margin-top: 15px;
-}
-.hero img {
-    width: 420px;
-    border-radius: 12px;
-    filter: drop-shadow(0px 0px 30px #6c63ff);
-    animation: float 3s ease-in-out infinite;
-}
+.hero-sub { font-size:1.2rem; color:#cfcfcf; margin-top:15px; }
+.hero img { width:420px; border-radius:12px; filter:drop-shadow(0px 0px 30px #6c63ff); animation: float 3s ease-in-out infinite; }
 
-@keyframes fadeIn { from { opacity:0; transform: translateY(40px);} }
-@keyframes float { 50% { transform: translateY(-12px);} }
+@keyframes fadeIn { from {opacity:0; transform:translateY(40px);} }
+@keyframes float { 50% { transform: translateY(-12px); } }
 
 /* ABOUT */
 .about {
@@ -83,80 +58,33 @@ nav a:hover {
     text-align: center;
 }
 .about h2 { font-size: 2.2rem; color: #6c63ff; }
-.about p { margin-top: 10px; color: #ccc; font-size: 1.1rem; }
+.about p { margin-top:10px; color:#ccc; font-size:1.1rem; }
 
 /* PROJECTS */
-.projects {
-    max-width: 1100px;
-    margin: 80px auto;
-    padding: 0 20px;
-}
-.projects h2 {
-    font-size: 2.3rem;
-    text-align: center;
-    margin-bottom: 50px;
-    color: #6c63ff;
-}
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-    gap: 30px;
-}
-.project-card {
-    background: #12122f;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.5);
-    transition: .3s;
-}
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 35px rgba(108, 99, 255, 0.5);
-}
-.project-card h3 { color: #6c63ff; margin-bottom: 12px; }
-.project-card p { color: #ccc; }
-.btn {
-    display: inline-block;
-    margin-top: 12px;
-    padding: 10px 18px;
-    background: #6c63ff;
-    border-radius: 8px;
-    color: #fff;
-}
+.projects { max-width: 1100px; margin:80px auto; padding:0 20px; }
+.projects h2 { font-size:2.3rem; text-align:center; margin-bottom:50px; color:#6c63ff; }
+.project-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:30px; }
+.project-card { background:#12122f; padding:20px; border-radius:12px; box-shadow:0 5px 25px rgba(0,0,0,0.5); transition:.3s; }
+.project-card:hover { transform: translateY(-5px); box-shadow:0 5px 35px rgba(108,99,255,0.5); }
+.project-card h3 { color:#6c63ff; margin-bottom:12px; }
+.project-card p { color:#ccc; }
+.btn { display:inline-block; margin-top:12px; padding:10px 18px; background:#6c63ff; border-radius:8px; color:#fff; }
 
 /* GITHUB AUTO SECTION */
-#github-projects {
-    max-width: 1100px;
-    margin: 80px auto;
-}
-#github-projects h2 {
-    text-align: center;
-    color: #6c63ff;
-    margin-bottom: 30px;
-}
+#github-projects { max-width:1100px; margin:80px auto; }
+#github-projects h2 { text-align:center; color:#6c63ff; margin-bottom:30px; }
 
 /* SKILLS */
-.skills { text-align: center; max-width: 1100px; margin: 80px auto; }
-.skill-box { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-.skill-item {
-    padding: 15px 25px;
-    background: #12122f;
-    border-radius: 8px;
-    font-weight: 500;
-    border: 1px solid #6c63ff;
-}
+.skills { text-align:center; max-width:1100px; margin:80px auto; }
+.skill-box { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+.skill-item { padding:15px 25px; background:#12122f; border-radius:8px; font-weight:500; border:1px solid #6c63ff; }
 
 /* FOOTER */
-footer {
-    text-align: center;
-    padding: 25px 0;
-    margin-top: 60px;
-    background: #14142d;
-}
+footer { text-align:center; padding:25px 0; margin-top:60px; background:#14142d; }
 
-@media (max-width: 900px) {
-    .hero { flex-direction: column; text-align: center; }
-    .hero img { width: 300px; }
+@media(max-width:900px){
+    .hero { flex-direction:column; text-align:center; }
+    .hero img { width:300px; }
 }
 </style>
 </head>
@@ -177,7 +105,7 @@ footer {
 <section class="hero" id="home">
     <div>
         <div class="hero-text">Hi, I'm <span>Shubham</span> 👋</div>
-        <div class="hero-sub">B.Tech Student & Web Developer crafting modern & responsive web solutions.</div>
+        <div class="hero-sub">B.Tech Student | Aspiring Web Developer | Learning and Sharing Projects</div>
     </div>
     <img src="developer-png.webp" alt="Shubham Developer"/>
 </section>
@@ -185,8 +113,9 @@ footer {
 <section class="about" id="about">
     <h2>About Me</h2>
     <p>
-        I’m Shubham, a B.Tech student and passionate Web Developer. I focus on creating clean, responsive, and modern web applications.
-        I enjoy building projects that combine creativity and functionality, and I am constantly learning new technologies to improve my skills.
+        I’m Shubham, a B.Tech student passionate about programming and web development.  
+        I’m building my GitHub portfolio with projects like Amazon Clone and College Website.  
+        I focus on learning new technologies, writing clean code, and documenting my work for continuous improvement.
     </p>
 </section>
 
@@ -196,13 +125,13 @@ footer {
 
         <div class="project-card">
             <h3>🛒 Amazon Clone</h3>
-            <p>Fully responsive Amazon UI clone with clean modern layout.</p>
+            <p>Fully responsive Amazon UI clone built for learning modern web development.</p>
             <a href="https://github.com/shubham-nov06/Amazon-Clone" target="_blank" class="btn">View Repo</a>
         </div>
 
         <div class="project-card">
             <h3>🎓 College Website</h3>
-            <p>Professional responsive multi-page college website.</p>
+            <p>Responsive multi-page website created for college project practice.</p>
             <a href="https://github.com/shubham-nov06/College-Website" target="_blank" class="btn">View Repo</a>
         </div>
 
@@ -219,20 +148,12 @@ footer {
 createRepoWidget({
     username: "shubham-nov06",
     containerId: "repo-container",
-    columns: { desktop: 3, tablet: 2, mobile: 1 },
-    maxRepos: 6,
-    sortBy: "updated",
-    scaleOnHover: 1.05,
-    cardStyles: {
-        backgroundColor: "#12122f",
-        borderRadius: "10px",
-        boxShadow: "0 4px 15px rgba(108,99,255,0.3)"
-    },
-    textStyles: {
-        titleColor: "#6c63ff",
-        descriptionColor: "#ccc",
-        iconColor: "#999"
-    }
+    columns: { desktop:3, tablet:2, mobile:1 },
+    maxRepos:6,
+    sortBy:"updated",
+    scaleOnHover:1.05,
+    cardStyles:{ backgroundColor:"#12122f", borderRadius:"10px", boxShadow:"0 4px 15px rgba(108,99,255,0.3)" },
+    textStyles:{ titleColor:"#6c63ff", descriptionColor:"#ccc", iconColor:"#999" }
 });
 </script>
 
@@ -244,7 +165,7 @@ createRepoWidget({
         <div class="skill-item">JavaScript</div>
         <div class="skill-item">Git & GitHub</div>
         <div class="skill-item">Responsive Design</div>
-        <div class="skill-item">UI / UX Design</div>
+        <div class="skill-item">UI / UX Basics</div>
     </div>
 </section>
 
