@@ -6,7 +6,6 @@
     <title>Shubham - Web Developer Portfolio</title>
 
     <style>
-        /* GLOBAL STYLES */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body {
@@ -48,78 +47,40 @@
             transform: scale(1.1);
         }
 
-        /* HERO SECTION */
+        /* HERO */
         .hero {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 120px 80px;
-            animation: fadeIn 1.2s ease-in-out;
         }
-
-        .hero-text {
-            max-width: 600px;
-            font-size: 2.5rem;
-        }
-
-        .hero-text span {
-            color: #6c63ff;
-        }
-
+        .hero-text { max-width: 600px; font-size: 2.5rem; }
+        .hero-text span { color: #6c63ff; }
         .hero img {
             width: 400px;
             border-radius: 12px;
             filter: drop-shadow(0px 0px 25px #6c63ff);
-            animation: float 3s ease-in-out infinite;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-
-        /* ABOUT SECTION */
+        /* ABOUT */
         .about {
             max-width: 1100px;
             margin: 60px auto;
             padding: 40px 20px;
             background: #12122f;
             border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
             text-align: center;
         }
+        .about h2 { color: #6c63ff; font-size: 2rem; margin-bottom: 15px; }
+        .about p { color: #ccc; font-size: 1.1rem; }
 
-        .about h2 {
-            color: #6c63ff;
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-
-        .about p {
-            color: #ccc;
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: auto;
-        }
-
-        /* PROJECTS SECTION */
+        /* PROJECTS */
         .projects {
             max-width: 1100px;
             margin: 80px auto;
             padding: 0 20px;
         }
-
-        .projects h2 {
-            font-size: 2.2rem;
-            text-align: center;
-            margin-bottom: 50px;
-            color: #fff;
-        }
+        .projects h2 { font-size: 2.2rem; text-align: center; margin-bottom: 50px; }
 
         .card {
             display: flex;
@@ -130,37 +91,10 @@
             box-shadow: 0 5px 20px rgba(0,0,0,0.5);
             transition: 0.3s;
         }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(108,99,255,0.5);
-        }
-
-        .card img {
-            width: 220px;
-            object-fit: cover;
-            border-right: 1px solid #6c63ff;
-            transition: transform 0.3s;
-        }
-
-        .card img:hover {
-            transform: scale(1.05);
-        }
-
-        .card-content {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #6c63ff;
-            margin-bottom: 12px;
-        }
-
+        .card:hover { transform: translateY(-5px); }
+        .card img { width: 220px; object-fit: cover; border-right: 1px solid #6c63ff; }
+        .card-content { padding: 20px; }
+        .card-title { font-size: 1.5rem; color: #6c63ff; margin-bottom: 12px; }
         .btn {
             display: inline-block;
             margin-top: 15px;
@@ -168,70 +102,43 @@
             background: #6c63ff;
             color: #fff;
             border-radius: 8px;
-            font-weight: 500;
-            transition: 0.3s;
         }
 
-        .btn:hover {
-            background: #5548e3;
-            transform: scale(1.05);
-            box-shadow: 0 0 10px #6c63ff;
-        }
+        /* GITHUB AUTO SECTION */
+        #github-projects { max-width: 1100px; margin: 80px auto; padding: 0 20px; }
+        #github-projects h2 { font-size: 2rem; text-align: center; color: #6c63ff; margin-bottom: 30px; }
 
-        /* SKILLS SECTION */
-        .skills {
-            max-width: 1100px;
-            margin: 80px auto;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
+        /* SKILLS */
+        .skills { max-width: 1100px; margin: 80px auto; padding: 40px 20px; text-align: center; }
         .skills h2 { font-size: 2rem; color: #6c63ff; margin-bottom: 25px; }
+        .skill-box { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+        .skill-item { background: #12122f; padding: 15px 25px; border-radius: 8px; }
 
-        .skill-box {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .skill-item {
-            background: #12122f;
-            padding: 15px 25px;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            color: #ccc;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-        }
-
-        /* FOOTER */
         footer {
             text-align: center;
             padding: 25px 0;
             background: #14142d;
-            color: #aaa;
-            font-size: 0.9rem;
             margin-top: 50px;
         }
 
-        /* RESPONSIVE */
         @media (max-width: 900px) {
             .hero { flex-direction: column; text-align: center; }
             .hero img { margin-top: 40px; width: 300px; }
-            .card { flex-direction: column; text-align: center; }
+            .card { flex-direction: column; }
             .card img { width: 100%; border-right: none; border-bottom: 1px solid #6c63ff; }
         }
     </style>
 </head>
 <body>
+
     <nav>
         <div class="logo">Shubham</div>
         <div>
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
+            <a href="#github-projects">GitHub Repos</a>
             <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
             <a href="https://github.com/shubham-nov06" target="_blank">GitHub</a>
         </div>
     </nav>
@@ -247,34 +154,56 @@
 
     <section class="about" id="about">
         <h2>About Me</h2>
-        <p>
-            I'm Shubham, a dedicated and passionate Web Developer who loves building modern,
-            responsive and visually pleasing websites. I focus on clean code, smooth UI/UX, and
-            creating digital products that truly make an impact. Always learning, always improving.
-        </p>
+        <p>I’m Shubham, a passionate Web Developer focused on clean UI, responsive design, and building modern web experiences.</p>
     </section>
 
     <section class="projects" id="projects">
-        <h2>🚀 Featured Projects</h2>
+        <h2>Featured Projects</h2>
 
         <div class="card">
-            <img src="amazon-clone.png" alt="Amazon Clone Project" />
+            <img src="amazon-clone.png" />
             <div class="card-content">
-                <div class="card-title">🛒 Amazon Clone</div>
-                <p>A fully functional Amazon website clone with product layout, modern UI, and responsive design.</p>
-                <a href="https://github.com/shubham-nov06/Amazon-Clone" class="btn" target="_blank">🔗 GitHub Repo</a>
+                <div class="card-title">Amazon Clone</div>
+                <p>Fully responsive Amazon website clone.</p>
+                <a href="https://github.com/shubham-nov06/Amazon-Clone" class="btn">GitHub Repo</a>
             </div>
         </div>
 
         <div class="card">
-            <img src="college-site.png" alt="College Website Project" />
+            <img src="college-site.png" />
             <div class="card-content">
-                <div class="card-title">🎓 College Website</div>
-                <p>Professional college website with clean UI, multiple sections, and fully responsive pages.</p>
-                <a href="https://github.com/shubham-nov06/College-Website" class="btn" target="_blank">🔗 GitHub Repo</a>
+                <div class="card-title">College Website</div>
+                <p>Clean professional multi-page responsive website.</p>
+                <a href="https://github.com/shubham-nov06/College-Website" class="btn">GitHub Repo</a>
             </div>
         </div>
     </section>
+
+    <!-- AUTO GITHUB FETCH SECTION -->
+    <section id="github-projects">
+        <h2>My GitHub Repositories</h2>
+        <div id="repo-container"></div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/gh/peterbenoit/RepoWidget@latest/dist/repoWidget.min.js"></script>
+    <script>
+        createRepoWidget({
+            username: "shubham-nov06",
+            containerId: "repo-container",
+            columns: { mobile: 1, tablet: 2, desktop: 3 },
+            maxRepos: 6,
+            sortBy: "updated",
+            scaleOnHover: 1.05,
+            cardStyles: {
+                backgroundColor: "#12122f",
+                borderRadius: "10px",
+                boxShadow: "0 4px 15px rgba(108,99,255,0.3)" },
+            textStyles: {
+                titleColor: "#6c63ff",
+                descriptionColor: "#ccc",
+                iconColor: "#999" }
+        });
+    </script>
 
     <section class="skills" id="skills">
         <h2>My Skills</h2>
@@ -282,16 +211,14 @@
             <div class="skill-item">HTML</div>
             <div class="skill-item">CSS</div>
             <div class="skill-item">JavaScript</div>
-            <div class="skill-item">Responsive Design</div>
             <div class="skill-item">Git & GitHub</div>
+            <div class="skill-item">Responsive Design</div>
             <div class="skill-item">UI/UX Basics</div>
         </div>
     </section>
 
-    <footer id="contact">
+    <footer>
         © 2025 Shubham | All Rights Reserved | <a href="https://github.com/shubham-nov06" target="_blank">GitHub</a>
     </footer>
 </body>
 </html>
-
-
