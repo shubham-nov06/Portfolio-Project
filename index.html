@@ -1,152 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Shubham - B.Tech Student & Aspiring Developer</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shubham - B.Tech Student & Aspiring Developer</title>
 
-<style>
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; }
-body {
-    font-family: "Poppins", sans-serif;
-    background: #0a0a23;
-    color: #fff;
-    line-height: 1.6;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* NAVBAR */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-    background: rgba(19,19,58,0.85);
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #282852;
-}
-nav .logo { font-weight: 700; font-size: 1.8rem; color:#6c63ff; }
-nav a { margin: 0 15px; font-weight:500; transition:.3s; }
-nav a:hover { color:#ffd54f; transform: scale(1.05); }
+        html {
+            scroll-behavior: smooth;
+        }
 
-/* HERO */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 140px 80px;
-    gap: 40px;
-}
-.hero-text { max-width: 550px; font-size:2.8rem; font-weight:600; animation: fadeIn 1.4s ease; }
-.hero-text span { color: #6c63ff; }
-.hero-sub { font-size:1.2rem; color:#cfcfcf; margin-top:15px; }
-.hero img { width:420px; border-radius:12px; filter:drop-shadow(0px 0px 30px #6c63ff); animation: float 3s ease-in-out infinite; }
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #0a0a23;
+            color: #fff;
+            line-height: 1.6;
+        }
 
-@keyframes fadeIn { from {opacity:0; transform:translateY(40px);} }
-@keyframes float { 50% { transform: translateY(-12px); } }
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background: rgba(19, 19, 58, 0.85);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #282852;
+        }
 
-/* ABOUT */
-.about {
-    max-width: 1100px;
-    margin: 80px auto;
-    padding: 50px;
-    background: #12122f;
-    border-radius: 12px;
-    text-align: center;
-}
-.about h2 { font-size: 2.2rem; color: #6c63ff; }
-.about p { margin-top:10px; color:#ccc; font-size:1.1rem; }
+        nav .logo {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #6c63ff;
+        }
 
-/* PROJECTS */
-.projects { max-width: 1100px; margin:80px auto; padding:0 20px; }
-.projects h2 { font-size:2.3rem; text-align:center; margin-bottom:50px; color:#6c63ff; }
-.project-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:30px; }
-.project-card { background:#12122f; padding:20px; border-radius:12px; box-shadow:0 5px 25px rgba(0,0,0,0.5); transition:.3s; }
-.project-card:hover { transform: translateY(-5px); box-shadow:0 5px 35px rgba(108,99,255,0.5); }
-.project-card h3 { color:#6c63ff; margin-bottom:12px; }
-.project-card p { color:#ccc; }
-.btn { display:inline-block; margin-top:12px; padding:10px 18px; background:#6c63ff; border-radius:8px; color:#fff; }
+        nav a {
+            margin: 0 15px;
+            font-weight: 500;
+            transition: .3s;
+        }
 
-/* SKILLS */
-.skills { text-align:center; max-width:1100px; margin:80px auto; }
-.skill-box { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
-.skill-item { padding:15px 25px; background:#12122f; border-radius:8px; font-weight:500; border:1px solid #6c63ff; }
+        nav a:hover {
+            color: #ffd54f;
+            transform: scale(1.05);
+        }
 
-/* FOOTER */
-footer { text-align:center; padding:25px 0; margin-top:60px; background:#14142d; }
+        /* HERO */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 140px 80px;
+            gap: 40px;
+        }
 
-@media(max-width:900px){
-    .hero { flex-direction:column; text-align:center; }
-    .hero img { width:300px; }
-}
-</style>
+        .hero-text {
+            max-width: 550px;
+            font-size: 2.8rem;
+            font-weight: 600;
+            animation: fadeIn 1.4s ease;
+        }
+
+        .hero-text span {
+            color: #6c63ff;
+        }
+
+        .hero-sub {
+            font-size: 1.2rem;
+            color: #cfcfcf;
+            margin-top: 15px;
+        }
+
+        .hero img {
+            width: 420px;
+            border-radius: 12px;
+            filter: drop-shadow(0px 0px 30px #6c63ff);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        /* ABOUT */
+        .about {
+            max-width: 1100px;
+            margin: 80px auto;
+            padding: 50px;
+            background: #12122f;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.2rem;
+            color: #6c63ff;
+        }
+
+        .about p {
+            margin-top: 10px;
+            color: #ccc;
+            font-size: 1.1rem;
+        }
+
+        /* PROJECTS */
+        .projects {
+            max-width: 1100px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .projects h2 {
+            font-size: 2.3rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #6c63ff;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: #12122f;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+            transition: .3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 35px rgba(108, 99, 255, 0.5);
+        }
+
+        .project-card h3 {
+            color: #6c63ff;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #ccc;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 10px 18px;
+            background: #6c63ff;
+            border-radius: 8px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* GITHUB REPOS */
+        .github-repos {
+            max-width: 1100px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .github-repos h2 {
+            text-align: center;
+            color: #6c63ff;
+            margin-bottom: 30px;
+        }
+
+        .repo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .repo-card {
+            background: #12122f;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+            transition: .3s;
+        }
+
+        .repo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 35px rgba(108, 99, 255, 0.5);
+        }
+
+        .repo-card h3 {
+            color: #6c63ff;
+            margin-bottom: 12px;
+        }
+
+        .repo-card p {
+            color: #ccc;
+        }
+
+        /* SKILLS */
+        .skills {
+            text-align: center;
+            max-width: 1100px;
+            margin: 80px auto;
+        }
+
+        .skill-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .skill-item {
+            padding: 15px 25px;
+            background: #12122f;
+            border-radius: 8px;
+            font-weight: 500;
+            border: 1px solid #6c63ff;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 25px 0;
+            margin-top: 60px;
+            background: #14142d;
+        }
+
+        @media(max-width:900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero img {
+                width: 300px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<nav>
-    <div class="logo">Shubham</div>
-    <div>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="https://github.com/shubham-nov06" target="_blank">GitHub</a>
-    </div>
-</nav>
-
-<section class="hero" id="home">
-    <div>
-        <div class="hero-text">Hi, I'm <span>Shubham</span> 👋</div>
-        <div class="hero-sub">B.Tech Student | Aspiring Developer | Learning and Sharing Projects</div>
-    </div>
-    <img src="developer-png.webp" alt="Shubham Developer"/>
-</section>
-
-<section class="about" id="about">
-    <h2>About Me</h2>
-    <p>
-        I’m Shubham, a B.Tech student passionate about programming and creating web projects.  
-        I focus on learning new technologies, building meaningful projects, and improving my skills every day.
-    </p>
-</section>
-
-<section class="projects" id="projects">
-    <h2>Featured Projects</h2>
-    <div class="project-grid">
-
-        <div class="project-card">
-            <h3>🛒 Amazon Clone</h3>
-            <p>A fully responsive Amazon UI clone created to learn modern web development.</p>
-            <a href="https://github.com/shubham-nov06/Amazon-Clone" target="_blank" class="btn">View Repo</a>
+    <nav>
+        <div class="logo">Shubham</div>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#github-repos">GitHub Repos</a>
+            <a href="#skills">Skills</a>
+            <a href="https://github.com/shubham-nov06" target="_blank">GitHub</a>
         </div>
+    </nav>
 
-        <div class="project-card">
-            <h3>🎓 College Website</h3>
-            <p>Responsive multi-page website created for college project practice.</p>
-            <a href="https://github.com/shubham-nov06/College-Website" target="_blank" class="btn">View Repo</a>
+    <section class="hero" id="home">
+        <div>
+            <div class="hero-text">Hi, I'm <span>Shubham</span> 👋</div>
+            <div class="hero-sub">B.Tech Student | Aspiring Developer | Learning and Sharing Projects</div>
         </div>
+        <img src="developer-png.webp" alt="Shubham Developer" />
+    </section>
 
-    </div>
-</section>
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>
+            I’m Shubham, a B.Tech student passionate about programming and creating projects.
+            I’m constantly learning new technologies and building projects to improve my skills.
+            All my work is available on GitHub for anyone to view.
+        </p>
+    </section>
 
-<section class="skills" id="skills">
-    <h2>My Skills</h2>
-    <div class="skill-box">
-        <div class="skill-item">HTML</div>
-        <div class="skill-item">CSS</div>
-        <div class="skill-item">JavaScript</div>
-        <div class="skill-item">Git & GitHub</div>
-        <div class="skill-item">Responsive Design</div>
-        <div class="skill-item">UI / UX Basics</div>
-    </div>
-</section>
+    <section class="projects" id="projects">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
 
-<footer>
-    © 2025 Shubham | All Rights Reserved | <a href="https://github.com/shubham-nov06" target="_blank">GitHub</a>
-</footer>
+            <div class="project-card">
+                <h3>🛒 Amazon Clone</h3>
+                <p>A fully responsive Amazon UI clone created to learn modern web development.</p>
+                <a href="https://github.com/shubham-nov06/Amazon-Clone" target="_blank" class="btn">View Repo</a>
+            </div>
+
+            <div class="project-card">
+                <h3>🎓 College Website</h3>
+                <p>Responsive multi-page website created for college project practice.</p>
+                <a href="https://github.com/shubham-nov06/College-Website" target="_blank" class="btn">View Repo</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="github-repos" id="github-repos">
+        <h2>My GitHub Repositories</h2>
+        <div class="repo-grid">
+
+            <div class="repo-card">
+                <h3>Amazon Clone</h3>
+                <p>A simple e-commerce clone to practice frontend and backend integration.</p>
+                <a href="https://github.com/shubham-nov06/Amazon-Clone" target="_blank" class="btn">GitHub Repo</a>
+            </div>
+
+            <div class="repo-card">
+                <h3>College Website</h3>
+                <p>Multi-page responsive college website project for learning layouts and design.</p>
+                <a href="https://github.com/shubham-nov06/College-Website" target="_blank" class="btn">GitHub Repo</a>
+            </div>
+
+            <!-- Add more repos manually here -->
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2>My Skills</h2>
+        <div class="skill-box">
+            <div class="skill-item">HTML</div>
+            <div class="skill-item">CSS</div>
+            <div class="skill-item">JavaScript</div>
+            <div class="skill-item">Git & GitHub</div>
+            <div class="skill-item">Responsive Design</div>
+            <div class="skill-item">UI / UX Basics</div>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Shubham | All Rights Reserved | <a href="https://github.com/shubham-nov06" target="_blank">GitHub</a>
+    </footer>
 
 </body>
+
 </html>
